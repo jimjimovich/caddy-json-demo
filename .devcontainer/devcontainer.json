@@ -1,0 +1,5 @@
+{
+    "name": "caddy-json-demo",
+    "dockerFile": "Dockerfile",
+    "appPort": ["2015:2015"],
+}
