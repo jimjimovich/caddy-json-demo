@@ -17,4 +17,4 @@ ENV HOME /home/jim
 
 USER jim
 
-#RUN npm install @cloudflare/wrangler
+ENV PATH="/workspaces/caddy-json-demo/bin:${PATH}"
