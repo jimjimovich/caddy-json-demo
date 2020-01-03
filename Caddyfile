@@ -2,17 +2,19 @@
 localhost:3000
 root html
 
-#reverse_proxy {
-#    to www.starryhope.com:443
-#    header_up Host {host}
-#    transport http {
-#        tls
-#    }
-#}
+templates {
+	#mime ["text/html", "application/json"]
+}
+
+reverse_proxy /api/ {
+    to www.starryhope.com:443
+    header_up Host www.starryhope.com
+    transport http {
+        tls
+    }
+}
+
+file_server
 
 #reverse_proxy /static/ https://www.metaweather.com/ {  
-#}
-
-#templates / {
-	#mime ["text/html", "application/json"]
 #}
