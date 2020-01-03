@@ -1,0 +1,15 @@
+{
+    "name": "caddy-json-demo",
+    "profile": "caddy-json-demo",
+    "regions": [
+      "us-east-1"
+    ],
+    "proxy": {
+      "command": "bin/caddy run --config Caddyfile --adapter caddyfile"
+    },
+    "stages": {
+      "staging": {
+        "domain": "caddy-json-demo.starryhope.com"
+      }
+    }
+  }

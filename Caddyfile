@@ -1,0 +1,18 @@
+#:{$PORT}
+localhost:3000
+root html
+
+#reverse_proxy {
+#    to www.starryhope.com:443
+#    header_up Host {host}
+#    transport http {
+#        tls
+#    }
+#}
+
+#reverse_proxy /static/ https://www.metaweather.com/ {  
+#}
+
+#templates / {
+	#mime ["text/html", "application/json"]
+#}
