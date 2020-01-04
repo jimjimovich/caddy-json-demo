@@ -13,18 +13,7 @@
     <div class="container">
       <h1 class="title is-1">Demo Site</h1>
 
-      {{ .Host }}
-
-      {{$markdownFile := (include "json/asins.json" | splitFrontMatter)}}
-
-      {{ range $key, $value := $markdownFile.Meta.asins }}
-      <div style="margin-bottom: 20px;">
-        {{ $value.id }}: {{ $value.price_amazon_new }}
-        {{ range $k, $v := $value }}
-        <li><strong>{{ $k }}</strong>: {{ $v }}</li>
-        {{ end }}
-      </div>
-      {{ end }}
+      <a href="/weather/">Weather API</a>
 
   </section>
 </body>

@@ -1,20 +1,20 @@
 #:{$PORT}
 localhost:3000
-root html
 
-templates {
-	#mime ["text/html", "application/json"]
-}
+templates
+
+rewrite /weather/* /weather/index.html
 
 reverse_proxy /api/ {
-    to www.starryhope.com:443
-    header_up Host www.starryhope.com
+    to www.metaweather.com:443
+    header_up Host {http.reverse_proxy.upstream.host}
+    header_up -Accept-Encoding
     transport http {
         tls
     }
 }
 
-file_server
+file_server {
+    root html
+}
 
-#reverse_proxy /static/ https://www.metaweather.com/ {  
-#}
